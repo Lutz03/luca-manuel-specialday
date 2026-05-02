@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Luca's 1st Birthday & Dedication</title>
+
+<!-- ✏️ Replace YOUR-NETLIFY-URL with your actual Netlify URL after deploying -->
+<meta property="og:title" content="🏀 You're Invited to Luca's 1st Birthday & Dedication!" />
+<meta property="og:description" content="Join us as we celebrate Luca's 1st Birthday & Dedication — May 24, 2026 · 10:00 AM · Montecito Residential Resort, Pasay 💜💛" />
+<meta property="og:image" content="https://luca-manuel-specialday.netlify.app/luca.png" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="800" />
+<meta property="og:url" content="https://luca-manuel-specialday.netlify.app" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Luca's 1st Birthday" />
+
+<!-- Twitter/iMessage card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="🏀 You're Invited to Luca's 1st Birthday & Dedication!" />
+<meta name="twitter:description" content="Join us as we celebrate Luca's 1st Birthday & Dedication — May 24, 2026 · 10:00 AM · Montecito Residential Resort, Pasay 💜💛" />
+<meta name="twitter:image" content="https://luca-manuel-specialday.netlify.app/luca.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lakers-purple: #552583;
+    --lakers-purple-dark: #3b1a5c;
+    --lakers-gold: #FDB927;
+    --lakers-gold-dark: #e0a014;
+    --court-tan: #d49a5a;
+    --ink: #1a1033;
+    --paper: #fffaf0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(253,185,39,0.25) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(253,185,39,0.2) 0%, transparent 50%),
+      linear-gradient(135deg, var(--lakers-purple) 0%, var(--lakers-purple-dark) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 60px;
+    overflow: hidden;
+  }
+
+  /* Faded YouTube background video */
+  .hero-bg-video {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-bg-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    opacity: 0.28;
+    filter: blur(2px) saturate(1.2);
+  }
+
+  /* Subtle dark/purple overlay so text stays readable */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, rgba(85,37,131,0.55) 0%, rgba(26,16,51,0.85) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Confetti basketballs floating */
+  .ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f4a460, #c46a1f 70%, #8b3a0a);
+    box-shadow: inset -3px -5px 10px rgba(0,0,0,0.3);
+    opacity: 0.45;
+    animation: float 8s ease-in-out infinite;
+    z-index: 2;
+  }
+  .ball::before, .ball::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border-top: 1.5px solid rgba(0,0,0,0.4);
+    border-bottom: 1.5px solid rgba(0,0,0,0.4);
+  }
+  .ball::after {
+    border: none;
+    border-left: 1.5px solid rgba(0,0,0,0.4);
+    border-right: 1.5px solid rgba(0,0,0,0.4);
+  }
+  .ball:nth-child(1) { top: 10%; left: 8%; width: 28px; height: 28px; animation-delay: 0s; }
+  .ball:nth-child(2) { top: 70%; left: 12%; width: 50px; height: 50px; animation-delay: 1.5s; }
+  .ball:nth-child(3) { top: 25%; right: 10%; width: 35px; height: 35px; animation-delay: 3s; }
+  .ball:nth-child(4) { top: 80%; right: 15%; width: 42px; height: 42px; animation-delay: 4.5s; }
+  .ball:nth-child(5) { top: 45%; left: 5%; width: 22px; height: 22px; animation-delay: 2s; }
+  .ball:nth-child(6) { top: 5%; right: 30%; width: 30px; height: 30px; animation-delay: 6s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(180deg); }
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--lakers-gold);
+    color: var(--lakers-purple-dark);
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    white-space: nowrap;
+  }
+
+  .you-are-invited {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-gold);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+  }
+
+  .hero-name {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: white;
+    font-size: clamp(4rem, 14vw, 9rem);
+    line-height: 0.95;
+    letter-spacing: 4px;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+    transform: skewX(-8deg);
+    text-transform: uppercase;
+  }
+
+  .hero-name span {
+    color: var(--lakers-gold);
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 8px;
+  }
+
+  .section-title,
+  .you-are-invited,
+  .venue-name,
+  .parking-card h4,
+  .detail-label,
+  .submit-btn,
+  .form-success h3 {
+    text-transform: uppercase;
+  }
+
+  .hero-photo-wrap {
+    position: relative;
+    margin: 30px auto 20px;
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 25px 30px rgba(0,0,0,0.4));
+    animation: dribble 3s ease-in-out infinite;
+  }
+
+  @keyframes dribble {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .hero-jersey-num {
+    position: absolute;
+    top: 2%;
+    right: 18%;
+    width: 80px;
+    height: 80px;
+    background: var(--lakers-gold);
+    color: var(--lakers-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: 2.8rem;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transform: rotate(15deg);
+  }
+
+  .hero-tagline {
+    color: white;
+    font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+    margin-top: 20px;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .hero-tagline strong {
+    color: var(--lakers-gold);
+    font-weight: 600;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    opacity: 0.8;
+    z-index: 2;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 8px); }
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section {
+    padding: 80px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .venue-section,
+  .rsvp-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ---------- SECTION BASKETBALL DECORATIONS ---------- */
+  .sec-ball {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f4a460, #c46a1f 70%, #8b3a0a);
+    pointer-events: none;
+    animation: secFloat var(--dur, 7s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    z-index: -1;
+  }
+
+  .sec-ball::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border-top: 2px solid rgba(0,0,0,0.2);
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+  }
+
+  .sec-ball::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border-left: 2px solid rgba(0,0,0,0.2);
+    border-right: 2px solid rgba(0,0,0,0.2);
+    transform: rotate(50deg);
+  }
+
+  @keyframes secFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33%  { transform: translateY(-18px) rotate(120deg); }
+    66%  { transform: translateY(8px) rotate(240deg); }
+  }
+
+  /* Gold ball variant for dark sections */
+  .sec-ball-gold {
+    background: radial-gradient(circle at 30% 30%, #ffe799, var(--lakers-gold) 70%, var(--lakers-gold-dark));
+  }
+  .sec-ball-gold::before {
+    border-color: rgba(85,37,131,0.3);
+  }
+  .sec-ball-gold::after {
+    border-color: rgba(85,37,131,0.3);
+  }
+
+  /* Court arc — faint semicircle line */
+  .court-arc {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(253,185,39,0.12);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Hoop silhouette */
+  .hoop {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.07;
+  }
+
+  .hoop-ring {
+    width: 60px;
+    height: 14px;
+    border: 4px solid #c46a1f;
+    border-radius: 50%;
+  }
+
+  .hoop-net {
+    width: 50px;
+    margin: 0 auto;
+    border-left: 3px solid #c46a1f;
+    border-right: 3px solid #c46a1f;
+    height: 36px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    border-bottom: 3px solid #c46a1f;
+  }
+
+  /* Section divider ball bounce */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 0;
+    overflow: hidden;
+  }
+
+  .divider-ball {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f4a460, #c46a1f);
+    animation: divBounce 1.2s ease-in-out infinite;
+  }
+
+  .divider-ball:nth-child(2) { animation-delay: 0.15s; }
+  .divider-ball:nth-child(3) { animation-delay: 0.30s; }
+  .divider-ball:nth-child(4) { animation-delay: 0.45s; }
+  .divider-ball:nth-child(5) { animation-delay: 0.60s; }
+
+  @keyframes divBounce {
+    0%, 100% { transform: translateY(0) scaleX(1) scaleY(1); }
+    40% { transform: translateY(-14px) scaleX(0.9) scaleY(1.1); }
+    60% { transform: translateY(0) scaleX(1.1) scaleY(0.85); }
+  }
+
+  .section-title {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: var(--lakers-purple);
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--lakers-gold);
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: #6a5e7a;
+    margin-bottom: 50px;
+    font-size: 1rem;
+  }
+
+  /* Lift all section content above background decorations */
+  .details-grid,
+  .venue-inner,
+  .parking-grid,
+  .health-grid,
+  .rsvp-inner,
+  .come-early-banner,
+  .section-title,
+  .section-sub {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---------- DETAILS CARDS ---------- */
+  .details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .details-grid > * {
+    flex: 1 1 260px;
+    max-width: 340px;
+  }
+
+  .detail-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(85,37,131,0.12);
+    border-top: 5px solid var(--lakers-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .detail-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(85,37,131,0.2);
+  }
+
+  .detail-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .detail-card-link:hover {
+    border-top-color: var(--lakers-purple);
+  }
+
+  .detail-card-link::after {
+    content: '↗';
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    color: var(--lakers-gold);
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+
+  .detail-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--lakers-purple), var(--lakers-purple-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    color: var(--lakers-gold);
+    font-size: 1.8rem;
+  }
+
+  .detail-label {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-purple);
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .detail-value {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .detail-value small {
+    display: block;
+    font-weight: 400;
+    color: #6a5e7a;
+    margin-top: 4px;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- COME EARLY BANNER ---------- */
+  .come-early-banner {
+    margin-top: 50px;
+    background: linear-gradient(135deg, var(--lakers-gold) 0%, #ffd966 100%);
+    border-radius: 24px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(253,185,39,0.35);
+    position: relative;
+    overflow: hidden;
+    border: 3px dashed var(--lakers-purple);
+  }
+
+  .come-early-icons {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    letter-spacing: 12px;
+    line-height: 1;
+  }
+
+  .come-early-icons span {
+    display: inline-block;
+    animation: bobble 2s ease-in-out infinite;
+  }
+  .come-early-icons span:nth-child(2) { animation-delay: 0.3s; }
+  .come-early-icons span:nth-child(3) { animation-delay: 0.6s; }
+
+  @keyframes bobble {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-8px) rotate(8deg); }
+  }
+
+  .come-early-banner h3 {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-purple);
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .come-early-banner p {
+    color: var(--lakers-purple-dark);
+    font-weight: 500;
+    font-size: 1.05rem;
+  }
+
+  /* ---------- RSVP DEADLINE ---------- */
+  .rsvp-deadline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(253,185,39,0.18), rgba(253,185,39,0.05));
+    border: 3px solid var(--lakers-gold);
+    border-radius: 20px;
+    padding: 26px 32px;
+    margin-top: 35px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+    animation: deadlinePulse 2.5s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(253,185,39,0.6);
+  }
+
+  @keyframes deadlinePulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(253,185,39,0.6),
+                  0 10px 30px rgba(253,185,39,0.3);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 0 14px rgba(253,185,39,0),
+                  0 15px 40px rgba(253,185,39,0.5);
+      transform: scale(1.02);
+    }
+  }
+
+  .deadline-glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, var(--lakers-gold), transparent, var(--lakers-gold), transparent);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: glowMove 3s linear infinite;
+    opacity: 0.5;
+  }
+
+  @keyframes glowMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+  }
+
+  .deadline-icon {
+    font-size: 3rem;
+    line-height: 1;
+    animation: shake 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(253,185,39,0.8));
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    20% { transform: rotate(-15deg); }
+    40% { transform: rotate(12deg); }
+    60% { transform: rotate(-8deg); }
+    80% { transform: rotate(5deg); }
+  }
+
+  .deadline-text {
+    flex: 1;
+  }
+
+  .rsvp-deadline strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+  }
+
+  .rsvp-deadline .deadline-date {
+    display: block;
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-gold);
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    text-shadow: 0 0 20px rgba(253,185,39,0.6);
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes textGlow {
+    from { text-shadow: 0 0 10px rgba(253,185,39,0.4); }
+    to { text-shadow: 0 0 25px rgba(253,185,39,0.9), 0 0 35px rgba(253,185,39,0.5); }
+  }
+
+  @media (max-width: 540px) {
+    .rsvp-deadline {
+      flex-direction: column;
+      text-align: center;
+      padding: 24px 20px;
+      gap: 12px;
+    }
+    .deadline-text { text-align: center; }
+  }
+
+  /* ---------- VENUE ---------- */
+  .venue-section {
+    background: linear-gradient(135deg, #f8f1ff 0%, #fff7e6 100%);
+    max-width: none;
+    padding: 80px 24px;
+  }
+
+  .venue-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .venue-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(85,37,131,0.15);
+  }
+
+  .venue-map {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    display: block;
+  }
+
+  .venue-info {
+    padding: 32px;
+    text-align: center;
+  }
+
+  .venue-name {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    color: var(--lakers-purple);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .venue-addr {
+    color: #6a5e7a;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--lakers-purple), var(--lakers-purple-dark));
+    color: white;
+    box-shadow: 0 10px 25px rgba(85,37,131,0.35);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(85,37,131,0.5);
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, var(--lakers-gold), var(--lakers-gold-dark));
+    color: var(--lakers-purple-dark);
+    box-shadow: 0 10px 25px rgba(253,185,39,0.4);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(253,185,39,0.55);
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- PARKING ---------- */
+  .parking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .parking-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--lakers-purple);
+  }
+
+  .parking-card h4 {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-purple);
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .parking-card p {
+    color: #5a4f6e;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .parking-link {
+    color: var(--lakers-purple);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--lakers-gold);
+    padding-bottom: 2px;
+  }
+
+  .parking-link:hover { color: var(--lakers-gold-dark); }
+
+  /* ---------- HEALTH PROTOCOL ---------- */
+  .health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  .health-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(85,37,131,0.1);
+    border: 2px solid #f0e8fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .health-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--lakers-gold);
+    box-shadow: 0 20px 40px rgba(85,37,131,0.18);
+  }
+
+  .health-icon {
+    font-size: 3rem;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+
+  .health-card h4 {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-purple);
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .health-card p {
+    color: #5a4f6e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- RSVP ---------- */
+  .rsvp-section {
+    background: linear-gradient(135deg, var(--lakers-purple) 0%, var(--lakers-purple-dark) 100%);
+    color: white;
+    max-width: none;
+    padding: 80px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rsvp-section::before {
+    content: '🏀';
+    position: absolute;
+    font-size: 25rem;
+    opacity: 0.04;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .rsvp-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .rsvp-section .section-title {
+    color: white;
+  }
+  .rsvp-section .section-title::after {
+    background: var(--lakers-gold);
+  }
+  .rsvp-section .section-sub {
+    color: rgba(255,255,255,0.8);
+  }
+
+  .rsvp-form {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    color: var(--ink);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--lakers-purple);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e8e0f0;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fafafa;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--lakers-purple);
+    box-shadow: 0 0 0 4px rgba(85,37,131,0.12);
+    background: white;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 540px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  .radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .radio-option {
+    position: relative;
+  }
+
+  .radio-option input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .radio-option label {
+    display: block;
+    padding: 16px;
+    text-align: center;
+    border: 2px solid #e8e0f0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin: 0;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .radio-option input:checked + label {
+    background: var(--lakers-purple);
+    color: white;
+    border-color: var(--lakers-purple);
+    transform: scale(1.02);
+  }
+
+  .radio-option.no input:checked + label {
+    background: #c8c0d0;
+    border-color: #c8c0d0;
+    color: var(--ink);
+  }
+
+  .dynamic-fields {
+    background: #f8f2ff;
+    border: 2px solid #e0d0f5;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .dynamic-fields .dynamic-title {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    color: var(--lakers-purple);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dynamic-fields .form-group {
+    margin-bottom: 12px;
+  }
+
+  .dynamic-fields .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    background: white;
+    color: var(--lakers-purple);
+    border: 2px dashed var(--lakers-purple);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .add-btn:hover {
+    background: var(--lakers-purple);
+    color: white;
+    border-style: solid;
+  }
+
+  .entry-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    animation: slideDown 0.25s ease;
+  }
+
+  .entry-row input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 2px solid #e8e0f0;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    background: #fafafa;
+  }
+
+  .entry-row input:focus {
+    outline: none;
+    border-color: var(--lakers-purple);
+    background: white;
+  }
+
+  .remove-btn {
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: #ffe0e0;
+    color: #c0392b;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .remove-btn:hover { background: #ffbcbc; }
+
+  .kid-card {
+    background: #f8f2ff;
+    border: 2px solid #e0d0f5;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    animation: slideDown 0.25s ease;
+  }
+
+  .kid-food-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .kid-food-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #e0d0f5;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--ink);
+  }
+
+  .kid-food-btn.selected-catering {
+    background: var(--lakers-purple);
+    color: white;
+    border-color: var(--lakers-purple);
+  }
+
+  .kid-food-btn.selected-mcdo {
+    background: var(--lakers-gold);
+    color: var(--lakers-purple-dark);
+    border-color: var(--lakers-gold-dark);
+  }
+
+  .kid-catering-warning {
+    display: none;
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-top: 10px;
+    color: #7d4e00;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--lakers-gold), var(--lakers-gold-dark));
+    color: var(--lakers-purple-dark);
+    border: none;
+    border-radius: 12px;
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 10px 25px rgba(253,185,39,0.4);
+    transition: all 0.25s;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(253,185,39,0.55);
+  }
+
+  .form-already {
+    text-align: center;
+    padding: 30px;
+    background: #f0fff4;
+    border-radius: 16px;
+    border: 2px solid #4caf50;
+    color: #1b5e20;
+    margin-top: 20px;
+  }
+  .form-already h3 {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    color: #2e7d32;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    background: #f0fff4;
+    border-radius: 16px;
+    border: 2px solid #4caf50;
+    color: #1b5e20;
+    margin-top: 20px;
+  }
+  .form-success.show { display: block; }
+  .form-success h3 {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: #2e7d32;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--lakers-purple-dark);
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  footer .heart {
+    color: var(--lakers-gold);
+    font-size: 1.4rem;
+    margin: 0 6px;
+  }
+
+  footer .small {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 8px;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 600px) {
+    .hero { padding: 30px 16px 80px; }
+    .hero-jersey-num { width: 70px; height: 70px; font-size: 2.3rem; }
+    section { padding: 60px 16px; }
+    .rsvp-form { padding: 28px 22px; }
+    .venue-map { height: 280px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <!-- Faded background video -->
+  <div class="hero-bg-video">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="lukahd2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+
+  <div class="hero-inner">
+    <span class="badge">🏀 1st Birthday & Dedication</span>
+    <div class="you-are-invited">You Are Invited To</div>
+    <h1 class="hero-name">LUCA'S<span>FIRST GAME</span></h1>
+
+    <div class="hero-photo-wrap">
+      <img src="luca.png" alt="Luca in his Lakers jersey" class="hero-photo" />
+    </div>
+
+    <p class="hero-tagline">
+      Our little MVP is turning <strong>ONE</strong>! Join us as we celebrate his <strong>1st Birthday</strong> &amp; <strong>Dedication</strong>.
+    </p>
+  </div>
+
+  <div class="scroll-cue">SCROLL DOWN ↓</div>
+</header>
+
+<!-- divider -->
+<div class="section-divider">
+  <div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div>
+</div>
+
+<!-- ==================== EVENT DETAILS ==================== -->
+<section id="details">
+  <!-- floating balls -->
+  <div class="sec-ball" style="width:90px;height:90px;top:-20px;left:-20px;opacity:0.09;--dur:8s;--delay:0s;"></div>
+  <div class="sec-ball" style="width:55px;height:55px;top:10%;right:-15px;opacity:0.08;--dur:6s;--delay:1s;"></div>
+  <div class="sec-ball" style="width:120px;height:120px;bottom:-30px;right:5%;opacity:0.07;--dur:9s;--delay:2s;"></div>
+  <div class="sec-ball" style="width:40px;height:40px;bottom:15%;left:3%;opacity:0.1;--dur:7s;--delay:0.5s;"></div>
+  <!-- court arc -->
+  <div class="court-arc" style="width:350px;height:350px;bottom:-200px;left:50%;transform:translateX(-50%);"></div>
+  <h2 class="section-title">Game Day Details</h2>
+  <p class="section-sub">Mark your calendars — you don't want to miss this match!</p>
+
+  <div class="details-grid">
+    <a class="detail-card detail-card-link" href="#" id="addToCalendarBtn">
+      <div class="detail-icon">📅</div>
+      <div class="detail-label">DATE & TIME</div>
+      <div class="detail-value">
+        May 24, 2026 · 10:00 AM
+        <small>Sunday — 📲 Tap to add to your phone's calendar</small>
+      </div>
+    </a>
+
+    <div class="detail-card">
+      <div class="detail-icon">🎁</div>
+      <div class="detail-label">GIFTS</div>
+      <div class="detail-value">
+        Monetary Gift Appreciated
+        <small>To make things a little easier, you need not worry about choosing a gift—a simple monetary gift would be greatly appreciated, as it will help me prepare for my growing needs. 💜</small>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-icon">👔</div>
+      <div class="detail-label">DRESS CODE</div>
+      <div class="detail-value">
+        Something Comfortable
+        <small>Come dressed to celebrate!</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="come-early-banner">
+    <div class="come-early-icons">
+      <span>🍦</span>
+      <span>🍪</span>
+      <span>☕</span>
+    </div>
+    <h3>Come Early! Treats Are Waiting!</h3>
+    <p>Ice cream, cookies, coffee, and more will be served — don't miss out!</p>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="section-divider">
+  <div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div>
+</div>
+
+<!-- ==================== VENUE ==================== -->
+<section class="venue-section">
+  <!-- floating balls -->
+  <div class="sec-ball" style="width:100px;height:100px;top:20px;left:-25px;opacity:0.1;--dur:9s;--delay:0s;"></div>
+  <div class="sec-ball" style="width:60px;height:60px;top:40%;right:-10px;opacity:0.08;--dur:7s;--delay:1.5s;"></div>
+  <div class="sec-ball" style="width:75px;height:75px;bottom:20px;left:10%;opacity:0.08;--dur:8s;--delay:3s;"></div>
+  <!-- hoop top-right -->
+  <div class="hoop" style="top:30px;right:60px;">
+    <div class="hoop-ring"></div>
+    <div class="hoop-net"></div>
+  </div>
+  <div class="venue-inner">
+    <h2 class="section-title">The Court</h2>
+    <p class="section-sub">Where the magic happens</p>
+
+    <div class="venue-card">
+      <iframe
+        class="venue-map"
+        src="https://www.google.com/maps?q=Montecito+Residential+Resort+Resort+Drive+Pasay+Newport+City&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+      <div class="venue-info">
+        <h3 class="venue-name">Montecito Residential Resort</h3>
+        <p class="venue-addr">Resort Drive, Pasay / Newport City Area</p>
+        <div class="btn-row">
+          <a class="btn btn-primary"
+             href="https://www.google.com/maps/dir/?api=1&destination=Montecito+Residential+Resort+Resort+Drive+Pasay+Newport+City"
+             target="_blank" rel="noopener">📍 Get Directions</a>
+          <a class="btn btn-gold"
+             href="https://www.google.com/maps/search/?api=1&query=Montecito+Residential+Resort+Resort+Drive+Pasay"
+             target="_blank" rel="noopener">🗺️ Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="section-divider">
+  <div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div>
+</div>
+
+<!-- ==================== PARKING ==================== -->
+<section id="parking">
+  <!-- floating balls -->
+  <div class="sec-ball" style="width:70px;height:70px;top:10%;left:-10px;opacity:0.09;--dur:8s;--delay:0.5s;"></div>
+  <div class="sec-ball" style="width:100px;height:100px;top:5%;right:-20px;opacity:0.07;--dur:10s;--delay:1s;"></div>
+  <div class="sec-ball" style="width:50px;height:50px;bottom:10%;right:5%;opacity:0.1;--dur:6s;--delay:2s;"></div>
+  <div class="sec-ball" style="width:80px;height:80px;bottom:-10px;left:8%;opacity:0.08;--dur:9s;--delay:0s;"></div>
+  <!-- court arc top -->
+  <div class="court-arc" style="width:280px;height:280px;top:-180px;right:10%;"></div>
+  <h2 class="section-title">Parking Guide</h2>
+  <p class="section-sub">Closest parking options near the venue — tap to view on Google Maps</p>
+
+  <div class="parking-grid">
+    <div class="parking-card">
+      <h4>🅿️ Street Parking along Montecito</h4>
+      <p>Pay parking along the street in front of <strong>Butterfly Garden</strong> — the closest spot to the venue.</p>
+      <a class="parking-link"
+         href="https://www.google.com/maps/search/?api=1&query=Butterfly+Garden+Montecito+Resort+Drive+Pasay"
+         target="_blank" rel="noopener">View on Google Maps →</a>
+    </div>
+
+    <div class="parking-card">
+      <h4>🅿️ St. Thérèse Parking</h4>
+      <p>Pay parking near the <strong>Shrine of St. Thérèse of the Child Jesus</strong> — another close option just a short walk from Montecito.</p>
+      <a class="parking-link"
+         href="https://www.google.com/maps/search/?api=1&query=Shrine+of+St.+Th%C3%A9r%C3%A8se+of+the+Child+Jesus+Newport+City+Pasay"
+         target="_blank" rel="noopener">View on Google Maps →</a>
+    </div>
+
+    <div class="parking-card">
+      <h4>🚕 Coming by Grab / Taxi?</h4>
+      <p>Drop-off point: <strong>Montecito Residential Resort, Resort Drive, Pasay</strong>.</p>
+      <a class="parking-link"
+         href="https://www.google.com/maps/search/?api=1&query=Montecito+Residential+Resort+Resort+Drive+Pasay"
+         target="_blank" rel="noopener">View Drop-off Point →</a>
+    </div>
+
+    <div class="parking-card">
+      <h4>🅿️ Find Other Parking Nearby</h4>
+      <p>Backup options nearby — <strong>Newport Mall, Marriott, Hilton, & Sheraton Manila</strong>. Tap to view all on Google Maps.</p>
+      <a class="parking-link"
+         href="https://www.google.com/maps/search/?api=1&query=Newport+Mall+Marriott+Hilton+Sheraton+parking+Newport+City+Pasay"
+         target="_blank" rel="noopener">Search Live on Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="section-divider">
+  <div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div>
+</div>
+
+<!-- ==================== HEALTH PROTOCOL ==================== -->
+<section id="health">
+  <!-- floating balls -->
+  <div class="sec-ball" style="width:85px;height:85px;top:-15px;right:8%;opacity:0.09;--dur:7s;--delay:0s;"></div>
+  <div class="sec-ball" style="width:50px;height:50px;top:40%;left:-10px;opacity:0.1;--dur:8s;--delay:2s;"></div>
+  <div class="sec-ball" style="width:65px;height:65px;bottom:-10px;right:15%;opacity:0.08;--dur:9s;--delay:1s;"></div>
+  <!-- hoop bottom-left -->
+  <div class="hoop" style="bottom:40px;left:40px;transform:rotate(-15deg);">
+    <div class="hoop-ring"></div>
+    <div class="hoop-net"></div>
+  </div>
+  <h2 class="section-title">Health Protocol</h2>
+  <p class="section-sub">For Baby Luca's safety, we kindly ask everyone to observe the following 💜</p>
+
+  <div class="health-grid">
+    <div class="health-card">
+      <div class="health-icon">🚭</div>
+      <h4>No Smoking</h4>
+      <p>Please refrain from smoking inside or near the venue.</p>
+    </div>
+
+    <div class="health-card">
+      <div class="health-icon">🧴</div>
+      <h4>Sanitize Your Hands</h4>
+      <p>Always use alcohol to sanitize your hands before holding or touching Luca.</p>
+    </div>
+
+    <div class="health-card">
+      <div class="health-icon">🚫💋</div>
+      <h4>No Kissing Luca</h4>
+      <p>Please avoid kissing Luca to protect his delicate immune system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="section-divider" style="background:var(--lakers-purple-dark);">
+  <div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div>
+</div>
+
+<!-- ==================== RSVP ==================== -->
+<section class="rsvp-section">
+  <!-- gold floating balls for dark bg -->
+  <div class="sec-ball sec-ball-gold" style="width:110px;height:110px;top:-20px;left:-20px;opacity:0.18;--dur:9s;--delay:0s;"></div>
+  <div class="sec-ball sec-ball-gold" style="width:60px;height:60px;top:25%;right:-10px;opacity:0.15;--dur:7s;--delay:1.5s;"></div>
+  <div class="sec-ball sec-ball-gold" style="width:80px;height:80px;bottom:10%;left:3%;opacity:0.12;--dur:8s;--delay:3s;"></div>
+  <div class="sec-ball sec-ball-gold" style="width:45px;height:45px;top:60%;right:8%;opacity:0.14;--dur:6s;--delay:0.5s;"></div>
+  <!-- court arc -->
+  <div class="court-arc" style="width:400px;height:400px;top:-250px;left:50%;transform:translateX(-50%);border-color:rgba(253,185,39,0.1);"></div>
+  <div class="rsvp-inner">
+    <h2 class="section-title">RSVP</h2>
+    <div id="inviteBadge" style="display:none; text-align:center; margin-bottom: 16px;"></div>
+
+    <div class="rsvp-deadline">
+      <div class="deadline-glow"></div>
+      <span class="deadline-icon">⏳</span>
+      <div class="deadline-text">
+        <strong>Please confirm your attendance before</strong>
+        <span class="deadline-date">May 11, 2026</span>
+      </div>
+    </div>
+
+    <p class="section-sub">Please confirm your attendance by replying below 💜💛</p>
+
+    <form class="rsvp-form" id="rsvpForm">
+      <div class="form-group">
+        <label>Will you be joining us?</label>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input type="radio" name="attending" id="yes" value="Yes, I'll be there!" checked>
+            <label for="yes">✅ YES — Count me in</label>
+          </div>
+          <div class="radio-option no">
+            <input type="radio" name="attending" id="no" value="Sorry, can't make it">
+            <label for="no">❌ Sadly, can't make it</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required placeholder="Juan Dela Cruz">
+      </div>
+
+      <!-- Group-only fields (hidden for solo invite) -->
+      <div id="groupSection">
+
+        <!-- Companions -->
+        <div class="dynamic-fields" id="companionSection" style="display:none;">
+          <div class="dynamic-title">👥 Companions</div>
+          <div id="companionList"></div>
+        </div>
+        <button type="button" class="add-btn" id="addCompanionBtn">👥 Add Companion</button>
+
+        <!-- Kids -->
+        <div class="dynamic-fields" id="kidsSection" style="display:none;">
+          <div class="dynamic-title">👶 Kids <span style="font-weight:400;font-size:0.8em;text-transform:none;letter-spacing:0;">(below 12 years of age)</span></div>
+          <div id="kidsList"></div>
+        </div>
+        <button type="button" class="add-btn" id="addKidBtn" style="margin-top:10px;">👶 Add Kid <span style="font-weight:400; font-size:0.85em;">(below 12 years of age)</span></button>
+
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message for Luca (optional) 💌</label>
+        <textarea id="message" name="message" rows="3" placeholder="Send a birthday wish or note..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">📩 SEND RSVP</button>
+
+      <div class="form-success" id="formSuccess">
+        <h3>🏀 SLAM DUNK! 🏀</h3>
+        <p>Thank you for confirming! Your RSVP has been received. See you at Luca's first game! 💜💛</p>
+      </div>
+
+      <div class="form-already" id="formAlready" style="display:none;">
+        <h3>✅ Already RSVPed!</h3>
+        <p>You've already sent your RSVP. We can't wait to see you at Luca's first game! 💜💛</p>
+        <button type="button" onclick="clearRsvp()" style="margin-top:12px;background:none;border:2px solid #2e7d32;color:#2e7d32;padding:8px 20px;border-radius:8px;cursor:pointer;font-family:'Poppins',sans-serif;font-size:0.85rem;font-weight:600;">Submit a new response</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="section-divider" style="background:var(--lakers-purple-dark);">
+  <div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div><div class="divider-ball"></div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer style="position:relative;overflow:hidden;">
+  <div class="sec-ball sec-ball-gold" style="width:80px;height:80px;top:-15px;left:-15px;opacity:0.15;--dur:8s;--delay:0s;"></div>
+  <div class="sec-ball sec-ball-gold" style="width:55px;height:55px;bottom:-10px;right:20px;opacity:0.13;--dur:7s;--delay:1s;"></div>
+  <p>Made with <span class="heart">💜💛</span> for Baby Luca</p>
+  <p class="small">Lakers Nation • Jersey #21 • Forever our MVP</p>
+</footer>
+
+<script>
+  // ---------- ALREADY RSVP'D DETECTION ----------
+  const RSVP_KEY = 'luca_bday_rsvp_sent';
+  const formAlready = document.getElementById('formAlready');
+  const rsvpForm    = document.getElementById('rsvpForm');
+
+  function checkAlreadyRsvp() {
+    if (localStorage.getItem(RSVP_KEY)) {
+      rsvpForm.style.display = 'none';
+      formAlready.style.display = 'block';
+    }
+  }
+
+  function clearRsvp() {
+    localStorage.removeItem(RSVP_KEY);
+    formAlready.style.display = 'none';
+    rsvpForm.style.display = 'block';
+  }
+
+  checkAlreadyRsvp();
+
+  // ---------- INVITE TYPE (solo vs group) ----------
+  const inviteType = new URLSearchParams(window.location.search).get('invite') || 'group';
+  const groupSection = document.getElementById('groupSection');
+  const inviteBadge  = document.getElementById('inviteBadge');
+
+  if (inviteType === 'solo') {
+    groupSection.style.display = 'none';
+    inviteBadge.style.display  = 'block';
+    inviteBadge.innerHTML = `<span style="
+      display:inline-block;
+      background:var(--lakers-gold);
+      color:var(--lakers-purple-dark);
+      padding:8px 22px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:0.85rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      box-shadow:0 6px 18px rgba(0,0,0,0.2);">
+      🎟️ Individual Invitation
+    </span>`;
+  } else {
+    inviteBadge.style.display  = 'block';
+    inviteBadge.innerHTML = `<span style="
+      display:inline-block;
+      background:var(--lakers-purple);
+      color:white;
+      padding:8px 22px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:0.85rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      border:2px solid var(--lakers-gold);
+      box-shadow:0 6px 18px rgba(0,0,0,0.2);">
+      👨‍👩‍👧‍👦 Group Invitation
+    </span>`;
+  }
+
+  // ---------- ADD TO CALENDAR (works on iPhone, Android, Outlook, etc.) ----------
+  const calBtn = document.getElementById('addToCalendarBtn');
+  calBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Luca Birthday//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      'UID:luca-1st-birthday-2026@invitation',
+      'DTSTAMP:20260427T000000Z',
+      'DTSTART:20260524T020000Z',
+      'DTEND:20260524T050000Z',
+      'SUMMARY:Luca\'s 1st Birthday & Dedication 🏀',
+      'DESCRIPTION:Join us as we celebrate Luca\'s 1st Birthday & Dedication! Dress code: Something comfortable. 💜💛',
+      'LOCATION:Montecito Residential Resort\\, Resort Drive\\, Pasay\\, Newport City',
+      'STATUS:CONFIRMED',
+      'BEGIN:VALARM',
+      'TRIGGER:-P1D',
+      'ACTION:DISPLAY',
+      'DESCRIPTION:Luca\'s 1st Birthday tomorrow!',
+      'END:VALARM',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Luca-1st-Birthday.ics';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 100);
+  });
+
+  // ---------- COMPANION & KIDS BUTTONS ----------
+  const companionSection = document.getElementById('companionSection');
+  const companionList    = document.getElementById('companionList');
+  const addCompanionBtn  = document.getElementById('addCompanionBtn');
+
+  const kidsSection      = document.getElementById('kidsSection');
+  const kidsList         = document.getElementById('kidsList');
+  const addKidBtn        = document.getElementById('addKidBtn');
+  const kidsFoodSection  = document.getElementById('kidsFoodSection');
+  const cateringWarning  = document.getElementById('cateringWarning');
+
+  let companionCount = 0;
+  let kidCount = 0;
+
+  addCompanionBtn.addEventListener('click', function() {
+    companionCount++;
+    companionSection.style.display = 'block';
+    const row = document.createElement('div');
+    row.className = 'entry-row';
+    row.innerHTML = `
+      <input type="text" name="companion${companionCount}" placeholder="Full name of companion ${companionCount}">
+      <button type="button" class="remove-btn" title="Remove">×</button>`;
+    row.querySelector('.remove-btn').addEventListener('click', function() {
+      row.remove();
+      if (companionList.children.length === 0) companionSection.style.display = 'none';
+    });
+    companionList.appendChild(row);
+  });
+
+  addKidBtn.addEventListener('click', function() {
+    kidCount++;
+    kidsSection.style.display = 'block';
+
+    const card = document.createElement('div');
+    card.className = 'kid-card';
+    card.dataset.food = "McDonald's";
+    card.innerHTML = `
+      <div class="entry-row">
+        <input type="text" name="kid${kidCount}" placeholder="Name of kid ${kidCount}">
+        <button type="button" class="remove-btn" title="Remove">×</button>
+      </div>
+      <div style="font-size:0.85rem; font-weight:600; color:var(--lakers-purple); margin-top:10px; margin-bottom:4px;">🍽️ Meal choice:</div>
+      <div class="kid-food-row">
+        <button type="button" class="kid-food-btn" data-food="Catering">🍱 Catering</button>
+        <button type="button" class="kid-food-btn selected-mcdo" data-food="McDonald's">🍔 McDonald's</button>
+      </div>
+      <div class="kid-catering-warning">⚠️ Please note that the catering food is not kid-friendly.</div>`;
+
+    // Food choice toggle
+    card.querySelectorAll('.kid-food-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        card.querySelectorAll('.kid-food-btn').forEach(b => b.classList.remove('selected-catering','selected-mcdo'));
+        const food = this.dataset.food;
+        this.classList.add(food === 'Catering' ? 'selected-catering' : 'selected-mcdo');
+        card.dataset.food = food;
+        card.querySelector('.kid-catering-warning').style.display = food === 'Catering' ? 'block' : 'none';
+      });
+    });
+
+    // Remove kid card
+    card.querySelector('.remove-btn').addEventListener('click', function() {
+      card.remove();
+      if (kidsList.children.length === 0) kidsSection.style.display = 'none';
+    });
+
+    kidsList.appendChild(card);
+  });
+
+  // ---------- RSVP FORM (Google Sheets) ----------
+  const form = document.getElementById('rsvpForm');
+  const success = document.getElementById('formSuccess');
+  const submitBtn = form.querySelector('.submit-btn');
+
+  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzAnW6ekaDe4c5e8G7WraEZnSlMcuSVMglJFIEeSb0g8kbYfS5x3HuG_6x6g8b1LtKz_w/exec';
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Collect companion names
+    const companions = [...companionList.querySelectorAll('input')]
+      .map(i => i.value.trim()).filter(Boolean);
+
+    // Collect kids names + per-kid food choice
+    const kidsDetails = [...kidsList.querySelectorAll('.kid-card')].map(card => {
+      const name = card.querySelector('input').value.trim();
+      const food = card.dataset.food || "McDonald's";
+      return name ? `${name} (${food})` : null;
+    }).filter(Boolean);
+
+    const kidsNames = kidsDetails.map(d => d.split(' (')[0]);
+
+    const data = {
+      timestamp:    new Date().toISOString(),
+      attending:    form.attending.value,
+      fullName:     form.fullName.value.trim(),
+      guests:       1 + companions.length,
+      companions:   companions.join(', ') || '—',
+      kids:         kidsDetails.length,
+      kidsNames:    kidsNames.join(', ') || '—',
+      kidsFood:     kidsDetails.join(' | ') || '—',
+      message:      form.message.value.trim()
+    };
+
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = '📤 SENDING...';
+    submitBtn.disabled = true;
+
+    try {
+      await fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data)
+      });
+
+      form.reset();
+      companionList.innerHTML = '';
+      kidsList.innerHTML = '';
+      companionSection.style.display = 'none';
+      kidsSection.style.display = 'none';
+      companionCount = 0; kidCount = 0;
+      localStorage.setItem(RSVP_KEY, 'true');
+      success.classList.add('show');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (err) {
+      alert('Sorry, something went wrong. Please try again or contact us directly.');
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
