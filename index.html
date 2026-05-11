@@ -1152,6 +1152,24 @@
     box-shadow: 0 15px 35px rgba(253,185,39,0.55);
   }
 
+  .form-expired {
+    text-align: center;
+    padding: 30px;
+    background: #fff3f3;
+    border-radius: 16px;
+    border: 2px solid #e53935;
+    color: #b71c1c;
+    margin-top: 20px;
+  }
+  .form-expired h3 {
+    font-family: 'Anton', 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    color: #c62828;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
   .form-already {
     text-align: center;
     padding: 30px;
@@ -1524,6 +1542,11 @@
         <p>Thank you for confirming! Your RSVP has been received. See you at Luca's first game! 💜💛</p>
       </div>
 
+      <div class="form-expired" id="formExpired" style="display:none;">
+        <h3>⏰ RSVP Closed</h3>
+        <p>The RSVP period has ended. Thank you for your interest — we hope to see you at Luca's first game! 💜💛</p>
+      </div>
+
       <div class="form-already" id="formAlready" style="display:none;">
         <h3>✅ Already RSVPed!</h3>
         <p>You've already sent your RSVP. We can't wait to see you at Luca's first game! 💜💛</p>
@@ -1547,6 +1570,15 @@
 </footer>
 
 <script>
+  // ---------- RSVP EXPIRATION (10pm PHT May 11, 2026) ----------
+  const RSVP_DEADLINE = new Date('2026-05-11T22:00:00+08:00');
+  const formExpired = document.getElementById('formExpired');
+
+  if (new Date() > RSVP_DEADLINE) {
+    document.getElementById('rsvpForm').style.display = 'none';
+    formExpired.style.display = 'block';
+  }
+
   // ---------- ALREADY RSVP'D DETECTION ----------
   const RSVP_KEY = 'luca_bday_rsvp_sent';
   const formAlready = document.getElementById('formAlready');
