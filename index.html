@@ -1482,13 +1482,9 @@
     <h2 class="section-title">RSVP</h2>
     <div id="inviteBadge" style="display:none; text-align:center; margin-bottom: 16px;"></div>
 
-    <div class="rsvp-deadline">
-      <div class="deadline-glow"></div>
-      <span class="deadline-icon">⏳</span>
-      <div class="deadline-text">
-        <strong>Please confirm your attendance before</strong>
-        <span class="deadline-date">May 11, 2026</span>
-      </div>
+    <div class="form-expired" id="formExpired" style="display:none;">
+      <h3>⏰ RSVP Closed</h3>
+      <p>The RSVP period has ended. Thank you for your interest — we hope to see you at Luca's first game! 💜💛</p>
     </div>
 
     <form class="rsvp-form" id="rsvpForm">
@@ -1540,11 +1536,6 @@
       <div class="form-success" id="formSuccess">
         <h3>🏀 SLAM DUNK! 🏀</h3>
         <p>Thank you for confirming! Your RSVP has been received. See you at Luca's first game! 💜💛</p>
-      </div>
-
-      <div class="form-expired" id="formExpired" style="display:none;">
-        <h3>⏰ RSVP Closed</h3>
-        <p>The RSVP period has ended. Thank you for your interest — we hope to see you at Luca's first game! 💜💛</p>
       </div>
 
       <div class="form-already" id="formAlready" style="display:none;">
